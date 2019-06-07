@@ -4,6 +4,8 @@ using System;
 using System.Drawing;
 using System.IO;
 
+// From fork https://github.com/hguy/dds-reader
+
 namespace DDSReader
 {
     public class DDSImage

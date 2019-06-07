@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <Description>A .NET Core DDS (Direct Draw Surface) reader and converter. It is composed of a development library.</Description>
+    <Version>1.0.1</Version>
+    <RepositoryUrl>https://github.com/hguy/dds-reader</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/hguy/dds-reader</PackageProjectUrl>
+    <RepositoryType></RepositoryType>
+    <PackageReleaseNotes>A .NET Core DDS (Direct Draw Surface) reader and converter. It is composed of a development library.</PackageReleaseNotes>
+    <PackageTags>.NET Core DDS Direct Draw Surface reader converter</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
