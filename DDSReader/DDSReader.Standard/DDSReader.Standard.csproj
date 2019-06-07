@@ -9,6 +9,7 @@
     <RepositoryUrl>https://github.com/hguy/dds-reader</RepositoryUrl>
     <PackageTags>.NET Core DDS Direct Draw Surface reader converter</PackageTags>
     <PackageReleaseNotes>A .NET Core DDS (Direct Draw Surface) reader and converter.</PackageReleaseNotes>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
