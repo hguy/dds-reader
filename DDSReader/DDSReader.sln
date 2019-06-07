@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2016
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDSReader", "DDSReader\DDSReader.csproj", "{EB6E2A8C-622A-4A49-8841-2CE08BD59045}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDSReader", "DDSReader\DDSReader.csproj", "{EB6E2A8C-622A-4A49-8841-2CE08BD59045}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDSReader.Console", "DDSReader.Console\DDSReader.Console.csproj", "{E0B6FDBF-7746-4791-A7BC-D0C08CB79BD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DDSReader.Console", "DDSReader.Console\DDSReader.Console.csproj", "{E0B6FDBF-7746-4791-A7BC-D0C08CB79BD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDSReader.Standard", "DDSReader.Standard\DDSReader.Standard.csproj", "{1017CD22-FEA3-44CA-A54E-E99781F5FE9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E0B6FDBF-7746-4791-A7BC-D0C08CB79BD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0B6FDBF-7746-4791-A7BC-D0C08CB79BD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0B6FDBF-7746-4791-A7BC-D0C08CB79BD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1017CD22-FEA3-44CA-A54E-E99781F5FE9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1017CD22-FEA3-44CA-A54E-E99781F5FE9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1017CD22-FEA3-44CA-A54E-E99781F5FE9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1017CD22-FEA3-44CA-A54E-E99781F5FE9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
