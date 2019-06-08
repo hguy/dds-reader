@@ -10,6 +10,7 @@
     <PackageTags>.NET Core DDS Direct Draw Surface reader converter</PackageTags>
     <PackageReleaseNotes>A .NET Core DDS (Direct Draw Surface) reader and converter.</PackageReleaseNotes>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1-pre</Version>
   </PropertyGroup>
 
   <ItemGroup>
