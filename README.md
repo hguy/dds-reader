@@ -25,6 +25,13 @@ Access the raw data with `img.Data` or save the image in another format with `im
 
 A previous version of this project used a C# DDS decoder cobbled together from a couple of sources. It was unreliable and difficult to maintain. For these reasons it was scrapped in favour of using the modern libraries referenced above.
 
+## Distribution
+
+DDSReader lib is distributed as a multi targeting nuget package at
+https://www.nuget.org/packages/DDSReader/ 
+
+Supported : net461, netstandard2.0, netcoreapp2.0
+
 ## License
 
 DDSReader is available under the [MIT license](./LICENSE). Project dependencies may have different licensing terms, consult relevant projects for more details.
