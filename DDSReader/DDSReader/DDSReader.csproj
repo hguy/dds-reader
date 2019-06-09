@@ -1,7 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <PackageId>DDSReader</PackageId>
+    <Title>Direct Draw Surface reader and converter</Title>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Description>A .NET DDS (Direct Draw Surface) reader and converter.</Description>
     <Version>1.0.4-pre</Version>
     <RepositoryUrl>https://github.com/hguy/dds-reader</RepositoryUrl>
@@ -12,44 +14,13 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Copyright></Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Configurations>Debug;Release;Debug_NET461;Release_NET461;Debug_NETCOREAPP20;Release_NETCOREAPP20</Configurations>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
-  
-  <PropertyGroup>
-    <PackageId>DDSReader</PackageId>
-    <Title>Direct Draw Surface reader and converter</Title>
-    <!--<TargetFrameworks>net35;net40;net45;netstandard1.3;netstandard2.0</TargetFrameworks>-->
-    <TargetFrameworks>net461;netstandard2.0;netcoreapp2.0</TargetFrameworks>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
   </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release_NET461|net461|AnyCPU'">
-    <DefineConstants>TRACE;NET461</DefineConstants>
-    <Optimize>true</Optimize>
-  </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug_NET461|net461|AnyCPU'">
-    <DefineConstants>DEBUG;TRACE;NET461</DefineConstants>
-    <Optimize>false</Optimize>
-  </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net461|AnyCPU'">
-    <DefineConstants>TRACE;NETSTANDARD20</DefineConstants>
-  </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release_NETCOREAPP20|net461|AnyCPU'">
-    <DefineConstants>TRACE;NETCOREAPP20</DefineConstants>
-    <Optimize>true</Optimize>
-  </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'">
-    <DefineConstants>DEBUG;TRACE;NETSTANDARD20</DefineConstants>
-  </PropertyGroup>
-  
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug_NETCOREAPP20|net461|AnyCPU'">
-    <DefineConstants>DEBUG;TRACE;NETCOREAPP20</DefineConstants>
-    <Optimize>false</Optimize>
-  </PropertyGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="Pfim" Version="0.7.0" />
     <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta0006" />

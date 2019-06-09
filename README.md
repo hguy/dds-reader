@@ -27,10 +27,8 @@ A previous version of this project used a C# DDS decoder cobbled together from a
 
 ## Distribution
 
-DDSReader lib is distributed as a multi targeting nuget package at
+DDSReader lib is distributed as a netstandard2.0 nuget package at
 https://www.nuget.org/packages/DDSReader/ 
-
-Supported : net461, netstandard2.0, netcoreapp2.0
 
 ## License
 
