@@ -5,10 +5,10 @@
     <Title>Direct Draw Surface reader and converter</Title>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Description>A .NET DDS (Direct Draw Surface) reader and converter.</Description>
-    <Version>1.0.4-pre</Version>
+    <Version>1.0.5-pre</Version>
     <RepositoryUrl>https://github.com/hguy/dds-reader</RepositoryUrl>
     <PackageProjectUrl>https://github.com/hguy/dds-reader</PackageProjectUrl>
-    <RepositoryType></RepositoryType>
+    <RepositoryType>Github</RepositoryType>
     <PackageReleaseNotes>A .NET DDS (Direct Draw Surface) reader and converter.</PackageReleaseNotes>
     <PackageTags>.NET DDS Direct Draw Surface reader converter</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
