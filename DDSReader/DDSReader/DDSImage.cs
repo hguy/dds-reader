@@ -23,6 +23,25 @@ namespace DDSReader
             }
         }
 
+        private byte[] TightData()
+        {
+            // Since image sharp can't handle data with line padding in a stride
+            // we create an stripped down array if any padding is detected
+            var tightStride = _image.Width * _image.BitsPerPixel / 8;
+            if (_image.Stride == tightStride)
+            {
+                return _image.Data;
+            }
+
+            byte[] newData = new byte[_image.Height * tightStride];
+            for (int i = 0; i < _image.Height; i++)
+            {
+                Buffer.BlockCopy(_image.Data, i * _image.Stride, newData, i * tightStride, tightStride);
+            }
+
+            return newData;
+        }
+
         public DDSImage(string file)
         {
             _image = Pfim.Pfim.FromFile(file);
@@ -70,7 +89,7 @@ namespace DDSReader
             where T : struct, IPixel<T>
         {
             Image<T> image = SixLabors.ImageSharp.Image.LoadPixelData<T>(
-                _image.Data, _image.Width, _image.Height);
+                TightData(), _image.Width, _image.Height);
             image.Save(file);
         }
 
@@ -132,7 +151,7 @@ namespace DDSReader
             where T : struct, IPixel<T>
         {
             Image<T> image = SixLabors.ImageSharp.Image.LoadPixelData<T>(
-                _image.Data, _image.Width, _image.Height);
+                TightData(), _image.Width, _image.Height);
             image.SaveAsBmp<T>(file);
         }
 
@@ -140,21 +159,21 @@ namespace DDSReader
             where T : struct, IPixel<T>
         {
             Image<T> image = SixLabors.ImageSharp.Image.LoadPixelData<T>(
-                _image.Data, _image.Width, _image.Height);
+                TightData(), _image.Width, _image.Height);
             image.SaveAsGif<T>(file);
         }
         private void SaveAsJpeg<T>(Stream file)
             where T : struct, IPixel<T>
         {
             Image<T> image = SixLabors.ImageSharp.Image.LoadPixelData<T>(
-                _image.Data, _image.Width, _image.Height);
+                TightData(), _image.Width, _image.Height);
             image.SaveAsJpeg<T>(file);
         }
         private void SaveAsPng<T>(Stream file)
             where T : struct, IPixel<T>
         {
             Image<T> image = SixLabors.ImageSharp.Image.LoadPixelData<T>(
-                _image.Data, _image.Width, _image.Height);
+                TightData(), _image.Width, _image.Height);
             image.SaveAsPng<T>(file);
         }
 
