@@ -73,6 +73,8 @@ namespace DDSReader
                 _image.Data, _image.Width, _image.Height);
             image.Save(file);
         }
+        
+        #region ConvertDDSTo
 
         public static Bitmap ConvertDDSToBitmap(byte[] ddsFile)
         {
@@ -81,6 +83,32 @@ namespace DDSReader
             file.SaveAsBmp(converted);
             return new Bitmap(converted);
         }
+
+        public static Bitmap ConvertDDSToPng(byte[] ddsFile)
+        {
+            var file = new DDSImage(ddsFile);
+            var converted = new MemoryStream();
+            file.SaveAsPng(converted);
+            return new Bitmap(converted);
+        }
+
+        public static Bitmap ConvertDDSToJpeg(byte[] ddsFile)
+        {
+            var file = new DDSImage(ddsFile);
+            var converted = new MemoryStream();
+            file.SaveAsJpeg(converted);
+            return new Bitmap(converted);
+        }
+
+        public static Bitmap ConvertDDSToGif(byte[] ddsFile)
+        {
+            var file = new DDSImage(ddsFile);
+            var converted = new MemoryStream();
+            file.SaveAsGif(converted);
+            return new Bitmap(converted);
+        }
+
+        #endregion
 
         #region SaveAs*
 
